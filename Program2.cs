@@ -13,43 +13,7 @@ namespace ConsoleApp1
         }
 
         static Node NewNode(int data) => new Node(data);
-
-        static Node InsertPos(Node headNode,
-                            int position, int data)
-        {
-            var head = headNode;
-            if (position < 1)
-                Console.WriteLine("Неправильно указана позиция");
-
-            if (position == 1)
-            {
-                var newNode = new Node(data)
-                {
-                    NextNode = headNode
-                };
-                head = newNode;
-            }
-            else
-            {
-                while (position-- != 0)
-                {
-                    if (position == 1)
-                    {
-                        Node newNode = NewNode(data);
-
-                        newNode.NextNode = headNode.NextNode;
-
-                        headNode.NextNode = newNode;
-                        break;
-                    }
-                    headNode = headNode.NextNode;
-                }
-                if (position != 1)
-                    Console.WriteLine("Неправильно указана позиция");
-            }
-            return head;
-        }
-
+        
         static void PrintList(Node node)
         {
             while (node.NextNode != null)
