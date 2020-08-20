@@ -60,7 +60,7 @@ namespace ConsoleApp1
                 node = node.NextNode;
             }
             if (maxCount > 1)
-                Console.WriteLine($"MaxData: {maxData} MaxCount: {maxCount}");
+                Console.WriteLine($"MaxData: {maxData} MaxCount: {maxCount} MaxSum: {maxData * maxCount}");
             Console.ReadKey();
         }
     }
